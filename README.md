@@ -139,6 +139,23 @@ curl -s http://your-domain/v1/models -H "Authorization: Bearer sk-aigw-xxxx"
 
 > 第一次部署请从 [安装指南](docs/installation.md) 开始；只想调用接口请直接看 [API 参考](docs/api.md)。
 
+## 反馈与交流
+
+遇到问题、想提建议，或希望跟踪版本更新，欢迎加入反馈群。
+
+| 方式 | 信息 |
+| --- | --- |
+| 群名称 | **pojia探索未知** |
+| QQ 群号 | **1128060404** |
+| 加群 | 手机 QQ 扫码，或在 QQ 里直接搜索群号 |
+
+<p align="center">
+  <img src="docs/assets/feedback-group.jpg" width="260" alt="反馈群二维码（QQ 群 1128060404）">
+</p>
+
+> 提 issue 前建议先看 [文档中心](docs/README.md) 与 [部署指南的故障排查](docs/deployment.md#10-故障排查)，
+> 提问时附上 `storage/logs/php-error.log` 的相关片段会更快定位。
+
 ## 安全说明
 
 - `.env`、`storage/` 运行时数据、数据库导出文件均不会入库（见 `.gitignore`）
