@@ -1,5 +1,14 @@
 # 架构说明
 
+> **文档导航**：[总目录](README.md) · [安装](installation.md) · [部署](deployment.md) · [配置](configuration.md) · [架构](architecture.md) · [API](api.md) · [供应商](providers.md) · [开发](development.md)
+
+理解本项目的三条主线：**单入口请求链路**、**Controller → Service → Repository 分层**、
+**Provider 适配上游协议**。读完后建议继续看 [开发指南](development.md) 动手新增接口。
+
+**本文导读**：[总览](#1-总览) · [请求生命周期](#2-请求生命周期) · [分层职责](#3-分层职责) · [供应商适配层](#4-供应商适配层) · [数据模型](#5-数据模型) · [关键链路](#6-关键链路) · [控制台前端](#7-控制台前端) · [安全边界](#8-安全边界)
+
+---
+
 ## 1. 总览
 
 ```text

@@ -1,5 +1,7 @@
 # 配置参考
 
+> **文档导航**：[总目录](README.md) · [安装](installation.md) · [部署](deployment.md) · [配置](configuration.md) · [架构](architecture.md) · [API](api.md) · [供应商](providers.md) · [开发](development.md)
+
 配置来源有两层：
 
 1. `.env` 文件（由 `Config::loadEnvFile()` 读入 `$_ENV`，**不调用 `putenv()`**）

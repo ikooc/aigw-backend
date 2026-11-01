@@ -1,5 +1,13 @@
 # AI 聚合网关（AIGW）· 后端
 
+<p>
+  <img src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white" alt="PHP 8.2+">
+  <img src="https://img.shields.io/badge/MySQL-8.0%2B-4479A1?logo=mysql&logoColor=white" alt="MySQL 8.0+">
+  <img src="https://img.shields.io/badge/Composer-不需要-success" alt="无需 Composer">
+  <img src="https://img.shields.io/badge/OpenAI-兼容接口-10a37f" alt="OpenAI 兼容">
+  <img src="https://img.shields.io/badge/文档-8_篇-blue" alt="8 篇中文文档">
+</p>
+
 把多个 AI 上游（Trae、WorkBuddy、Antigravity、豆包、ZCode、Qoder、商汤小浣熊、Loomy、自定义 OpenAI 兼容服务等）的账号池聚合成一个**OpenAI 兼容网关**，并附带管理后台与用户控制台。
 
 - 纯 PHP 8.2 实现，**不依赖 Composer / 框架**，自带轻量 MVC、DI 容器与路由
@@ -59,6 +67,9 @@ storage/                运行时目录（会话、日志、临时文件）
 
 ## 快速开始
 
+> 完整步骤（目录权限、PHP-FPM、计划任务、本地开发环境、排障）见 [安装指南](docs/installation.md)；
+> 生产运维（CDN 回源、备份升级、安全加固）见 [部署指南](docs/deployment.md)。
+
 ### 1. 环境要求
 
 - PHP **8.2+**，扩展：`pdo_mysql`、`openssl`、`curl`、`mbstring`、`json`、`session`、`gd`（验证码图片）
@@ -114,12 +125,19 @@ curl -s http://your-domain/v1/models -H "Authorization: Bearer sk-aigw-xxxx"
 
 ## 文档
 
-- [架构说明](docs/architecture.md) —— 请求生命周期、分层、数据模型、关键链路
-- [API 参考](docs/api.md) —— OpenAI 兼容接口、用户与管理接口、错误格式
-- [配置项](docs/configuration.md) —— 全部环境变量与默认值
-- [部署指南](docs/deployment.md) —— Nginx / PHP-FPM / cron / CDN 回源令牌 / 排障
-- [供应商适配](docs/providers.md) —— 支持的上游、登录方式、能力矩阵、自定义供应商
-- [开发指南](docs/development.md) —— 代码约定、扩展供应商、扩展路由与服务
+完整文档见 **[文档中心](docs/README.md)**（含三条阅读路径与文档地图），每一篇顶部都有统一导航。
+
+| 文档 | 内容 |
+| --- | --- |
+| [安装指南](docs/installation.md) | 环境检查、建库、`.env`、安装脚本、Web 服务器、首次登录、本地开发 |
+| [部署指南](docs/deployment.md) | Nginx / Apache / PHP-FPM、计划任务、CDN 回源令牌、备份升级、排障、安全加固 |
+| [配置参考](docs/configuration.md) | 全部环境变量与默认值 |
+| [架构说明](docs/architecture.md) | 请求生命周期、分层职责、数据模型、关键链路 |
+| [API 参考](docs/api.md) | OpenAI 兼容接口、用户端与管理端接口、错误格式 |
+| [供应商适配](docs/providers.md) | 13 个上游、登录方式、能力矩阵、新增供应商 |
+| [开发指南](docs/development.md) | 代码约定、新增接口模板、调试、数据库变更、提交自检 |
+
+> 第一次部署请从 [安装指南](docs/installation.md) 开始；只想调用接口请直接看 [API 参考](docs/api.md)。
 
 ## 安全说明
 

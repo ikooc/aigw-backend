@@ -1,5 +1,10 @@
 # 供应商适配
 
+> **文档导航**：[总目录](README.md) · [安装](installation.md) · [部署](deployment.md) · [配置](configuration.md) · [架构](architecture.md) · [API](api.md) · [供应商](providers.md) · [开发](development.md)
+
+新增适配器的代码骨架与分层约定见 [开发指南 § 6](development.md#6-新增供应商适配器)；
+登录相关接口的出入参见 [API 参考](api.md)。
+
 ## 1. 内置供应商
 
 | Key | 展示名 | 登录方式 | 图片输入 | 说明 |

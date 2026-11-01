@@ -1,6 +1,12 @@
 # API 参考
 
+> **文档导航**：[总目录](README.md) · [安装](installation.md) · [部署](deployment.md) · [配置](configuration.md) · [架构](architecture.md) · [API](api.md) · [供应商](providers.md) · [开发](development.md)
+
 所有接口返回 JSON（流式接口为 `text/event-stream`）。编码统一 UTF-8。
+认证方式与环境准备见 [安装指南 § 11](installation.md#11-首次登录与初始化检查清单)；
+供应商能力差异见 [供应商适配](providers.md)。
+
+**本文导读**：[认证](#1-认证) · [OpenAI 兼容接口](#2-openai-兼容接口) · [公共接口](#3-公共接口无需登录) · [用户端接口](#4-用户端接口需登录) · [管理后台接口](#5-管理后台接口需管理员登录) · [状态码](#6-状态码约定)
 
 ## 1. 认证
 
