@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/Composer-不需要-success" alt="无需 Composer">
   <img src="https://img.shields.io/badge/OpenAI-兼容接口-10a37f" alt="OpenAI 兼容">
   <img src="https://img.shields.io/badge/文档-8_篇-blue" alt="8 篇中文文档">
+  <img src="https://img.shields.io/badge/License-AGPL--3.0-663399" alt="License AGPL-3.0">
 </p>
 
 把多个 AI 上游（Trae、WorkBuddy、Antigravity、豆包、ZCode、Qoder、商汤小浣熊、Loomy、自定义 OpenAI 兼容服务等）的账号池聚合成一个**OpenAI 兼容网关**，并附带管理后台与用户控制台。
@@ -155,6 +156,30 @@ curl -s http://your-domain/v1/models -H "Authorization: Bearer sk-aigw-xxxx"
 
 > 提 issue 前建议先看 [文档中心](docs/README.md) 与 [部署指南的故障排查](docs/deployment.md#10-故障排查)，
 > 提问时附上 `storage/logs/php-error.log` 的相关片段会更快定位。
+
+## 许可证与合规
+
+| 文档 | 内容 |
+| --- | --- |
+| [发布说明](CHANGELOG.md) | 版本、功能、变更与已知限制 |
+| [隐私说明](PRIVACY.md) | 实例会处理哪些数据、保存多久、提供给谁 |
+| [第三方声明](THIRD-PARTY-NOTICES.md) | 第三方组件、商标素材与许可范围 |
+| [许可证全文](LICENSE) | GNU AGPL-3.0 英文原文 |
+
+### 许可证范围
+
+本项目以 **GNU Affero General Public License v3.0（AGPL-3.0）** 授权：
+
+- **覆盖**：`app/`、`bootstrap/`、`config/`、`routes/`、`bin/`、`database/`、`public/`（除 `assets/vendor/`）、`deploy/`、`docs/` 与根目录文档，均为原创代码，按 AGPL-3.0 授权。
+- **不覆盖**：
+  - `public/assets/vendor/vue.global.prod.js` —— Vue 3，**MIT** 许可（版权归 Vue 作者）
+  - `public/assets/img/providers/*` —— 供应商名称与 Logo 属**商标素材**，归各权利方所有，仅用于标识对应服务，不在 AGPL 授权范围内
+  - PHP 扩展、Nginx、MySQL 等系统组件 —— 未随仓库分发，适用各自许可
+- **网络使用（§13）**：修改后通过公网向用户提供交互式服务，必须向这些用户提供对应源码的获取方式。
+- 不附加 AGPL-3.0 之外的额外限制；不授予任何商标使用权。
+
+> 商业使用本身不被 AGPL 禁止，但必须履行源码开放义务。若无法接受，请勿使用本软件。
+> 详见 [第三方声明 § 1](THIRD-PARTY-NOTICES.md#1-许可证范围)。
 
 ## 安全说明
 
